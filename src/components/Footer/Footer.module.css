@@ -1,0 +1,17 @@
+.footerBlock {
+    height: 150px;
+    background-color: #a866a8;
+}
+.footerContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.title {
+    background-color: #f1eeee;
+}
+.contacts {
+    width: 250px;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-around;
+}
