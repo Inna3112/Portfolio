@@ -1,20 +1,27 @@
 .contactsBlock {
-    height: 100vh;
+    /*height: 100vh;*/
     background-color: #f5f5b2;
+    padding: 50px 0px;
 }
 .contactsContainer {
     flex-direction: column;
     justify-content: flex-start;
-
 }
 .title {
     background-color: #f1eeee;
 }
 .contacts {
-    border: 1px solid;
-    width: 50%;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.contact {
+    width: 200px;
+    border: 1px solid;
+    margin-top: 5px;
+}
+.button {
+    margin-top: 10px;
 }
