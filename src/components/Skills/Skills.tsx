@@ -20,7 +20,9 @@ export const Skills: React.FC<PropsType> = ({skills}) => {
                         return <Skill key={index}
                                       title={skill.title}
                                       description={skill.description}
-                                      icon={skill.icon} />
+                                      icon={skill.icon}
+                                      imgAlt={skill.imgAlt}
+                        />
                     })}
                 </div>
             </div>

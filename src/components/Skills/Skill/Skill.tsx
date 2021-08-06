@@ -1,21 +1,19 @@
 import React from 'react';
 import s from './Skill.module.css';
-import browser from './../../../assets/images/053-web browser.svg'
-import {DescribeBlock} from "../../../common/components/DescribeBlock/DescribeBlock";
+import {DescribeBlock} from '../../../common/components/DescribeBlock/DescribeBlock';
 
 
 type PropsType = {
     title: string
     description: string
     icon: string
+    imgAlt: string
 }
-export const Skill = ({title, description, icon}: PropsType) => {
+export const Skill = ({title, description, icon, imgAlt}: PropsType) => {
     return (
         <div className={s.skill}>
-            <div className={s.icon}>
-                <img src='./../../../assets/images/053-web browser.svg' />
-            </div>
-            <DescribeBlock title={title} description={description} />
+            <img src={icon} alt={imgAlt} />
+            <DescribeBlock title={title} description={description}/>
         </div>
     );
 }

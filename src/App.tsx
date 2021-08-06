@@ -10,7 +10,7 @@ import {StateType} from "./data/data";
 
 type PropsType = StateType
 
-const App: React.FC<PropsType> = ({skills, projects}) => {
+const App: React.FC<PropsType> = ({skills, projects, contacts}) => {
   return (
     <div className="App">
       <Header />
@@ -18,7 +18,7 @@ const App: React.FC<PropsType> = ({skills, projects}) => {
       <Skills skills={skills}/>
       <Projects projects={projects} />
       <Contacts />
-      <Footer />
+      <Footer contacts={contacts}/>
     </div>
   );
 }

@@ -1,16 +1,17 @@
 .contactsBlock {
     /*height: 100vh;*/
-    background-color: #f5f5b2;
-    padding: 50px 0px;
+    background-color:  #252527;
+    padding: 50px 0;
 }
 .contactsContainer {
     flex-direction: column;
     justify-content: flex-start;
 }
 .title {
-    background-color: #f1eeee;
+
 }
 .contactForm {
+    margin-top: 30px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -23,8 +24,22 @@
 }
 .contactForm input, .contactForm textarea {
     width: 100%;
+    margin: 5px;
+    padding: 10px;
+    background-color: #1f1f20;
+    color: #fff;
+    outline: none;
+    border: #dc965a;
+}
+.contactForm input:focus, .contactForm textarea:focus {
+    outline: #dc965a;
+    border: #dc965a;
 }
 .contactBtn {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     padding: 5px 30px;
-    background-color: #eeeef5;
+    margin-top: 5px;
+    background-color: #dc965a;
 }

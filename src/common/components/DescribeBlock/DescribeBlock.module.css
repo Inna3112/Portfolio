@@ -1,16 +1,27 @@
-.projectInfo {
-    padding: 25px 20px;
+.describeInfo {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid;
 }
 
-.projectTitle {
+.describeTitle {
     font-size: 16px;
     letter-spacing: 1px;
     margin: 0 0 5px;
     line-height: 1.2;
+    color: #fff;
+    text-align: center;
+    border: 1px solid;
 }
 
-.description {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.8;
-    font-size: 12px;
+.describeDescription {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #5e6472;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    border: 1px solid;
+    padding: 0;
 }
