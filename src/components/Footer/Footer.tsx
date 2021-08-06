@@ -8,9 +8,11 @@ export const Footer = () => {
         <div className={s.footerBlock}>
             <div className={`${sContainer.container} ${s.footerContainer}`}>
                 <h2 className={s.title}>Inna Fomichova</h2>
-                <div className={s.contacts}>
-                    <span>Facebook</span>
-                    <span>Instagram</span>
+                <div className={s.socialIcons}>
+                    <div className={s.socialIcon}></div>
+                    <div className={s.socialIcon}></div>
+                    <div className={s.socialIcon}></div>
+                    <div className={s.socialIcon}></div>
                 </div>
                 <p>2021 All rights reserved</p>
             </div>

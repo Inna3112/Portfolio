@@ -2,17 +2,23 @@ import React from 'react';
 import s from './Skills.module.css';
 import sContainer from './../../common/stiles/Container.module.css'
 import {Skill} from "./Skill/Skill";
+import {Title} from "../../common/components/title/Title";
+import {SkillType} from "../../data/data";
 
 
-export const Skills = () => {
+type PropsType = {
+    skills: Array<SkillType>
+}
+
+export const Skills: React.FC<PropsType> = ({skills}) => {
     return (
         <div className={s.skillsBlock}>
             <div className={`${sContainer.container} ${s.skillsContainer}`}>
-                <h2 className={s.title}>Skills</h2>
+                <Title text={'Skills'}/>
                 <div className={s.skills}>
-                    <Skill title={'JS'} description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim...'}/>
-                    <Skill title={'TS'} description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor'}/>
-                    <Skill title={'React'} description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit'}/>
+                    {skills.map((skill, index) => {
+                        return <Skill key={index} title={skill.title} description={skill.description} icon={skill.icon} />
+                    })}
                 </div>
             </div>
         </div>

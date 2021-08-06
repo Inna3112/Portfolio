@@ -6,13 +6,16 @@ import {Skills} from "./components/Skills/Skills";
 import {Projects} from "./components/Projects/Projects";
 import {Contacts} from "./components/Contacts/Contacts";
 import {Footer} from "./components/Footer/Footer";
+import {StateType} from "./data/data";
 
-const App = () => {
+type PropsType = StateType
+
+const App: React.FC<PropsType> = ({skills}) => {
   return (
     <div className="App">
       <Header />
       <Main />
-      <Skills />
+      <Skills skills={skills}/>
       <Projects />
       <Contacts />
       <Footer />

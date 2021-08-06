@@ -8,12 +8,12 @@ export const Contacts = () => {
         <div className={s.contactsBlock}>
             <div className={`${sContainer.container} ${s.contactsContainer}`}>
                 <h3 className={s.title}>Contacts</h3>
-                <form className={s.contacts}>
-                    <input className={s.contact} type="text"/>
-                    <input className={s.contact} type="text"/>
-                    <textarea className={s.contact}></textarea>
+                <form className={s.contactForm}>
+                    <input type="text"/>
+                    <input type="text"/>
+                    <textarea />
+                    <button className={s.contactBtn} type="submit"> Send </button>
                 </form>
-                <input className={s.button} type="submit"/>
             </div>
         </div>
     );
