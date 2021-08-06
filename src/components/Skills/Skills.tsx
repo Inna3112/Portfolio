@@ -17,7 +17,10 @@ export const Skills: React.FC<PropsType> = ({skills}) => {
                 <Title text={'Skills'}/>
                 <div className={s.skills}>
                     {skills.map((skill, index) => {
-                        return <Skill key={index} title={skill.title} description={skill.description} icon={skill.icon} />
+                        return <Skill key={index}
+                                      title={skill.title}
+                                      description={skill.description}
+                                      icon={skill.icon} />
                     })}
                 </div>
             </div>

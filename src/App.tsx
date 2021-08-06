@@ -10,13 +10,13 @@ import {StateType} from "./data/data";
 
 type PropsType = StateType
 
-const App: React.FC<PropsType> = ({skills}) => {
+const App: React.FC<PropsType> = ({skills, projects}) => {
   return (
     <div className="App">
       <Header />
       <Main />
       <Skills skills={skills}/>
-      <Projects />
+      <Projects projects={projects} />
       <Contacts />
       <Footer />
     </div>

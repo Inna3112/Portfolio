@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Skill.module.css';
 import browser from './../../../assets/images/053-web browser.svg'
+import {DescribeBlock} from "../../../common/components/DescribeBlock/DescribeBlock";
 
 
 type PropsType = {
@@ -14,8 +15,7 @@ export const Skill = ({title, description, icon}: PropsType) => {
             <div className={s.icon}>
                 <img src='./../../../assets/images/053-web browser.svg' />
             </div>
-            <h3>{title}</h3>
-            <span className={s.description}>{description}</span>
+            <DescribeBlock title={title} description={description} />
         </div>
     );
 }

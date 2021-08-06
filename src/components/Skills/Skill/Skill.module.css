@@ -1,17 +1,16 @@
 .icon {
     width: 60px;
     height: 60px;
-    background-color: #77779a;
+
 }
 .skill {
     width: 250px;
-    background-color: silver;
+    background-color: #252527;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: #fff;
     margin: 10px;
 }
-.description {
-    padding: 5px;
-}
+

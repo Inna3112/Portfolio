@@ -1,0 +1,16 @@
+.projectInfo {
+    padding: 25px 20px;
+}
+
+.projectTitle {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+    line-height: 1.2;
+}
+
+.description {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    font-size: 12px;
+}
