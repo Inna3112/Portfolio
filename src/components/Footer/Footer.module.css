@@ -12,7 +12,7 @@
     padding: 0 0 15px;
     margin: 0;
     font-weight: 700;
-    color: white;
+    color: #1c1d24;
 }
 .socialIcons {
     width: 250px;
@@ -21,15 +21,15 @@
     justify-content: space-around;
 }
 .socialIcon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 5px;
 }
 .footerRight {
     font-family: 'Nunito', sans-serif;
     line-height: 1.7;
     font-size: 16px;
-    color: #fff;
+    color: #1c1d24;
     font-weight: 400;
     text-align: center;
 }
