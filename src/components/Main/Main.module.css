@@ -3,7 +3,7 @@
     background-color: #dc965a;
 }
 .greeting {
-    width: 300px;
+    width: 350px;
     color: #1c1d24;
 }
 .greeting h6 {
@@ -11,6 +11,7 @@
     margin-bottom: 15px;
 }
 .greeting h1 {
+    margin: 0;
     font-size: 60px;
     line-height: 1.2;
     letter-spacing: 5px;
@@ -25,4 +26,10 @@
     width: 300px;
     height: 400px;
     background-color: #e3dcdc;
+}
+
+@media screen and (max-width: 425px) {
+    .greeting h1 {
+        letter-spacing: 0px;
+    }
 }
