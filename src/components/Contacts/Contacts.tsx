@@ -12,9 +12,9 @@ export const Contacts = () => {
                 <Title text={'Contacts'} />
                 {/*<h2 className={s.title}>Contacts</h2>*/}
                 <form className={s.contactForm}>
-                    <input type="text" placeholder={'Name'}/>
-                    <input type="text" placeholder={'Email'}/>
-                    <textarea placeholder={'Comment'}/>
+                    <input className={s.formControl} type='text' placeholder={'Name'}/>
+                    <input className={s.formControl} type='text' placeholder={'Email'}/>
+                    <textarea className={s.formControl} placeholder={'Comment'}/>
                     <Button title={'Send your message'} type='submit' />
                     {/*<button className={s.contactBtn} type="submit"> Send </button>*/}
                 </form>
