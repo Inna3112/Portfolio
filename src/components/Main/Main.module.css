@@ -4,7 +4,22 @@
 }
 .greeting {
     width: 300px;
-    background-color: #f1eeee;
+    color: #1c1d24;
+}
+.greeting h6 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.greeting h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    letter-spacing: 5px;
+}
+.greeting h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.8;
 }
 .photo {
     width: 300px;
