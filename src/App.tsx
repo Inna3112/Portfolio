@@ -7,20 +7,22 @@ import {Projects} from "./components/Projects/Projects";
 import {Contacts} from "./components/Contacts/Contacts";
 import {Footer} from "./components/Footer/Footer";
 import {StateType} from "./data/data";
+import {ScrollUp} from "./components/ScrollUp/ScrollUp";
 
 type PropsType = StateType
 
 const App: React.FC<PropsType> = ({skills, projects, contacts}) => {
-  return (
-    <div className="App">
-      <Header />
-      <Main />
-      <Skills skills={skills}/>
-      <Projects projects={projects} />
-      <Contacts />
-      <Footer contacts={contacts}/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <ScrollUp/>
+            <Header/>
+            <Main/>
+            <Skills skills={skills}/>
+            <Projects projects={projects}/>
+            <Contacts/>
+            <Footer contacts={contacts}/>
+        </div>
+    );
 }
 
 export default App;
