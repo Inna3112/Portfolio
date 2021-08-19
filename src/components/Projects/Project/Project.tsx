@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Project.module.css';
+import s from './Project.module.scss';
 import {DescribeBlock} from "../../../common/components/DescribeBlock/DescribeBlock";
 import {Button} from "../../../common/components/Button/Button";
 
@@ -13,7 +13,6 @@ export const Project = ({title, description, style}: PropsType) => {
         <div className={s.project}>
             <div style={style} className={s.img}>
                 <Button title={'Look'} />
-                {/*<button className={s.button}>Look</button>*/}
             </div>
             <DescribeBlock title={title} description={description} />
         </div>

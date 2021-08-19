@@ -1,0 +1,44 @@
+@use "src/common/stiles/sass/variables" as v;
+
+.scrollUp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #fff;
+  color: v.$bgColor;
+  width: 42px;
+  height: 45px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 0 30px rgb(0 0 0 / 15%);
+  font-size: 20px;
+  cursor: pointer;
+
+  & span {
+    font-weight: 600;
+  }
+
+  .tiAngleDoubleUp {
+    font-family: "icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+
+    &::before {
+      content: "\e90c";
+    }
+  }
+}
+
+
+

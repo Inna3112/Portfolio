@@ -1,6 +1,5 @@
 import React from 'react';
-import s from './Nav.module.css';
-import {NavLink} from "react-router-dom";
+import s from './Nav.module.scss';
 
 export const Nav = () => {
     let arr =[

@@ -1,27 +1,33 @@
-.describeInfo {
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid;
-}
+@use "src/common/stiles/sass/variables" as v;
 
-.describeTitle {
+.describeInfo {
+  padding: 10px;
+  margin: 10px;
+  //border: 1px solid;
+
+  .describeTitle {
     font-size: 16px;
     letter-spacing: 1px;
     margin: 0 0 5px;
     line-height: 1.2;
-    color: #1c1d24;
+    color: v.$textColor;
     text-align: center;
-    border: 1px solid;
-}
+    //border: 1px solid;
+  }
 
-.describeDescription {
+  .describeDescription {
     font-family: 'Nunito', sans-serif;
     line-height: 1.7;
     font-size: 16px;
-    color: #5e6472;
+    color: v.$textSecondColor;
     font-weight: 400;
     text-align: center;
     display: block;
-    border: 1px solid;
+    //border: 1px solid;
     padding: 0;
+  }
 }
+
+
+
+

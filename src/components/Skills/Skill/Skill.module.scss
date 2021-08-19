@@ -1,0 +1,28 @@
+@use "src/common/stiles/sass/variables" as v;
+
+.skill {
+  width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: v.$bgColor;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.4;
+  }
+
+  & img {
+    width: 60px;
+    height: 60px;
+  }
+}
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './ScrollUp.module.css';
+import s from './ScrollUp.module.scss';
 
 
 

@@ -5,9 +5,9 @@ import {Main} from "./components/Main/Main";
 import {Skills} from "./components/Skills/Skills";
 import {Projects} from "./components/Projects/Projects";
 import {Contacts} from "./components/Contacts/Contacts";
-import {Footer} from "./components/Footer/Footer";
 import {StateType} from "./data/data";
 import {ScrollUp} from "./components/ScrollUp/ScrollUp";
+import {Footer} from "./components/Footer/Footer";
 
 type PropsType = StateType
 

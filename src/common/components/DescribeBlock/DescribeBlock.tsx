@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './DescribeBlock.module.css'
+import s from './DescribeBlock.module.scss'
 
 type PropsType = {
     title: string

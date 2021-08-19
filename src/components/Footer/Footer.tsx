@@ -1,8 +1,8 @@
 import React from 'react';
-import s from './Footer.module.css';
+import s from './Footer.module.scss';
 import sContainer from './../../common/stiles/Container.module.css'
-import {ContactType} from "../../data/data";
-import {DescribeBlock} from "../../common/components/DescribeBlock/DescribeBlock";
+import {ContactType} from '../../data/data';
+import {Links} from './Links/Links';
 
 type FooterPropsType = {
     contacts: Array<ContactType>
@@ -19,30 +19,4 @@ export const Footer: React.FC<FooterPropsType> = ({contacts}) => {
             </div>
         </div>
     );
-}
-
-type ContactPropsType = {
-    image: string
-    imgAlt: string
-    link: string
-}
-export const Contact: React.FC<ContactPropsType>  = ({image, imgAlt, link}) => {
-    return (
-        <span>
-            <a href={link}>
-                <img src={image} alt={imgAlt} className={s.socialIcon}/>
-            </a>
-        </span>
-    )
-}
-
-type LinksPropsType = {
-    contacts: Array<ContactType>
-}
-export const Links: React.FC<LinksPropsType> = ({contacts}) => {
-    return (
-        <span>
-            {contacts.map((el,index) =><Contact key={index} image={el.image} imgAlt={el.imgAlt} link={el.link} /> )}
-        </span>
-    )
 }
