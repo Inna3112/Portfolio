@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.60b19308.chunk.css",
-    "main.js": "/Portfolio/static/js/main.796e82c3.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.796e82c3.chunk.js.map",
-    "runtime-main.js": "/Portfolio/static/js/runtime-main.5eb1bf29.js",
-    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.5eb1bf29.js.map",
-    "static/js/2.1b6da1ed.chunk.js": "/Portfolio/static/js/2.1b6da1ed.chunk.js",
-    "static/js/2.1b6da1ed.chunk.js.map": "/Portfolio/static/js/2.1b6da1ed.chunk.js.map",
-    "static/js/3.5ebba4ad.chunk.js": "/Portfolio/static/js/3.5ebba4ad.chunk.js",
-    "static/js/3.5ebba4ad.chunk.js.map": "/Portfolio/static/js/3.5ebba4ad.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.d88ff0b5.chunk.css",
+    "main.js": "/Portfolio/static/js/main.c8fdd713.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.c8fdd713.chunk.js.map",
+    "runtime-main.js": "/Portfolio/static/js/runtime-main.d0119cd1.js",
+    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.d0119cd1.js.map",
+    "static/js/2.bce2f569.chunk.js": "/Portfolio/static/js/2.bce2f569.chunk.js",
+    "static/js/2.bce2f569.chunk.js.map": "/Portfolio/static/js/2.bce2f569.chunk.js.map",
+    "static/js/3.dcf099e8.chunk.js": "/Portfolio/static/js/3.dcf099e8.chunk.js",
+    "static/js/3.dcf099e8.chunk.js.map": "/Portfolio/static/js/3.dcf099e8.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "static/css/main.60b19308.chunk.css.map": "/Portfolio/static/css/main.60b19308.chunk.css.map",
-    "static/js/2.1b6da1ed.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.1b6da1ed.chunk.js.LICENSE.txt",
+    "static/css/main.d88ff0b5.chunk.css.map": "/Portfolio/static/css/main.d88ff0b5.chunk.css.map",
+    "static/js/2.bce2f569.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.bce2f569.chunk.js.LICENSE.txt",
     "static/media/032-github.1be3365d.svg": "/Portfolio/static/media/032-github.1be3365d.svg",
     "static/media/038-pencil box.0356dfc0.svg": "/Portfolio/static/media/038-pencil box.0356dfc0.svg",
     "static/media/039-rocket.bd100895.svg": "/Portfolio/static/media/039-rocket.bd100895.svg",
@@ -25,9 +25,9 @@
     "static/media/todo.0c07657b.jpg": "/Portfolio/static/media/todo.0c07657b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5eb1bf29.js",
-    "static/js/2.1b6da1ed.chunk.js",
-    "static/css/main.60b19308.chunk.css",
-    "static/js/main.796e82c3.chunk.js"
+    "static/js/runtime-main.d0119cd1.js",
+    "static/js/2.bce2f569.chunk.js",
+    "static/css/main.d88ff0b5.chunk.css",
+    "static/js/main.c8fdd713.chunk.js"
   ]
 }
