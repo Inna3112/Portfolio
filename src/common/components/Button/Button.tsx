@@ -3,11 +3,11 @@ import s from './Button.module.scss';
 
 type PropsType = {
     title: string
-    type?: string
+    href: string
 }
-export const Button = ({title}: PropsType) => {
+export const Button = ({title, href}: PropsType) => {
     return (<>
-            <button className={s.button}>{title}</button>
+            <a href={href} className={s.button}>{title}</a>
         </>
     );
 }

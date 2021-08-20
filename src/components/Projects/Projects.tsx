@@ -19,7 +19,9 @@ export const Projects: React.FC<PropsType> = ({projects}) => {
                         return <Project key={index}
                                         style={project.style}
                                         title={project.title}
-                                        description={project.description} />
+                                        description={project.description}
+                                        href={project.url}
+                        />
                     })}
                 </div>
             </div>

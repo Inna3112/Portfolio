@@ -1,5 +1,6 @@
 @use "src/common/stiles/sass/variables" as v;
 @use "src/common/stiles/sass/mixins" as m;
+@use "src/common/components/Button/Button.module";
 
 * {
   outline: none !important;
@@ -39,6 +40,9 @@
 
       & textarea {
         height: inherit;
+      }
+      & button[type='submit'] {
+        @extend .button;
       }
     }
   }

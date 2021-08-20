@@ -7,12 +7,15 @@ type PropsType = {
     style: any
     title: string
     description: string
+    href: string
 }
-export const Project = ({title, description, style}: PropsType) => {
+
+export const Project = ({title, description, style, href}: PropsType) => {
+
     return (
         <div className={s.project}>
             <div style={style} className={s.img}>
-                <Button title={'Look'} />
+                 <Button title={'Look'} href={href} />
             </div>
             <DescribeBlock title={title} description={description} />
         </div>

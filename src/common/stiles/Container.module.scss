@@ -1,7 +1,7 @@
 @use "src/common/stiles/sass/mixins" as m;
 
 .container {
-    @include m.flex(center, space-between);
+    @include m.flex(center, center);
     border: 1px solid;
     margin: 0 auto;
     height: 100%;
