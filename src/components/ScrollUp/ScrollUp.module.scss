@@ -1,6 +1,8 @@
 @use "src/common/stiles/sass/variables" as v;
+@use "src/common/stiles/sass/mixins" as m;
 
 .scrollUp {
+  @include m.flex(center, center);
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -9,9 +11,6 @@
   width: 42px;
   height: 45px;
   z-index: 99;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 6px;
   transition: all .3s ease-in-out;
   box-shadow: 0 0 30px rgb(0 0 0 / 15%);

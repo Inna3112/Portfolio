@@ -1,3 +1,5 @@
+@use "src/common/stiles/sass/mixins" as m;
+
 .project {
     width: 350px;
     display: flex;
@@ -6,12 +8,10 @@
     text-align: center;
     background-color: #fcfafa;
     .img {
+        @include m.flex(center, center);
         width: 150px;
         height: 150px;
         background-color: #77779a;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -29,12 +29,3 @@
     }
 }
 
-
-//.button {
-//    position: relative;
-//    font-size: 16px;
-//    letter-spacing: 1px;
-//    padding: 0px 25px;
-//    z-index: 1;
-//    background-color: #dc965a;
-//}

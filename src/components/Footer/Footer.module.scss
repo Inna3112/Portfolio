@@ -1,35 +1,27 @@
 @use "src/common/stiles/sass/variables" as v;
+@use "src/common/stiles/sass/mixins" as m;
 
 .footerBlock {
   height: 150px;
   background-color: v.$bgColor;
 
   .footerContainer {
-    flex-direction: column;
-    justify-content: flex-start;
+    @include m.flexContainer();
 
     .title {
-      font-family: "Nunito", serif;
-      font-size: 24px;
+      @include m.text(v.$fontFamilySerif, 24px, 700, v.$textColor);
       padding: 0 0 15px;
       margin: 0;
-      font-weight: 700;
-      color: v.$textColor;
     }
 
     .socialIcons {
       width: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
+      @include m.flex(center, space-around);
     }
 
     .footerRight {
-      font-family: 'Nunito', sans-serif;
+      @include m.text(v.$fontFamily, 16px, 400, v.$textColor);
       line-height: 1.7;
-      font-size: 16px;
-      color: v.$textColor;
-      font-weight: 400;
       text-align: center;
     }
   }

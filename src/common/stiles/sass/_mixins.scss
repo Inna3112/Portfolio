@@ -1,0 +1,17 @@
+
+
+@mixin text($fontFamily, $fontSize, $fontWeight, $textColor){
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $textColor;
+}
+@mixin flex($justifyContent, $alignItems){
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+@mixin flexContainer(){
+  flex-direction: column;
+  justify-content: flex-start;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Footer.module.scss';
-import sContainer from './../../common/stiles/Container.module.css'
+import sContainer from '../../common/stiles/Container.module.scss'
 import {ContactType} from '../../data/data';
 import {Links} from './Links/Links';
 

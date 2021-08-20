@@ -1,10 +1,10 @@
+@use "src/common/stiles/sass/mixins" as m;
+
 .container {
+    @include m.flex(center, space-between);
     border: 1px solid;
     margin: 0 auto;
     height: 100%;
     width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
 }

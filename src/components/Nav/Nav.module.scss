@@ -1,9 +1,9 @@
+@use "src/common/stiles/sass/mixins" as m;
+
 .nav {
-  border: 1px solid;
+  @include m.flex(space-between, flex-end);
+  //border: 1px solid;
   width: 400px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
 
   & a {
     text-decoration: none;
