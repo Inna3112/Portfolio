@@ -1,10 +1,11 @@
 @use "../../../common/stiles/sass/mixins" as m;
 @use "../../../common/stiles/sass/variables" as v;
 
-.nav {
-  @include m.flex(space-between, flex-end);
-  //border: 1px solid;
-  width: 400px;
+.burgerNav {
+  @include m.flex(center, center);
+  border: 1px solid;
+  flex-direction: column;
+  width: 300px;
 
   & a {
     text-decoration: none;
@@ -17,11 +18,11 @@
       color: v.$bgColor;
     }
 
-    &.active {
+    .active {
       color: v.$bgColor;
     }
   }
-  @media screen and (max-width: 400px){
+  @media screen and (min-width: 400px){
     display: none;
   }
 }

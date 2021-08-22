@@ -3,7 +3,7 @@
 
 .skillsBlock {
   background-color: v.$bgThirdColor;
-  padding: 80px 0px;
+  padding: 80px 0;
 
   .skillsContainer {
     @include m.flexContainer();

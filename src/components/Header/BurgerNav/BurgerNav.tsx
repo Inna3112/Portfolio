@@ -1,8 +1,8 @@
 import React from 'react';
-import s from './Nav.module.scss';
+import s from './BurgerNav.module.scss';
 import { Link } from 'react-scroll';
 
-export const Nav = () => {
+export const BurgerNav = () => {
     let arr =[
         {name: 'main', id: 'main'},
         {name: 'skills', id: 'skills'},
@@ -25,7 +25,7 @@ export const Nav = () => {
         )
     })
     return (
-        <div className={s.nav}>
+        <div className={s.burgerNav}>
             {navLinks}
         </div>
     );
