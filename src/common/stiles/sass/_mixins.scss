@@ -14,3 +14,9 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+@mixin typingEffect(){
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.8;
+}

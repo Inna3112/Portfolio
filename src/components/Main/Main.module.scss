@@ -22,12 +22,16 @@
       letter-spacing: 5px;
     }
 
-    & h2 {
-      font-size: 30px;
-      font-weight: 500;
-      margin: 0;
-      line-height: 1.8;
+    & span {
+      div {
+        @include m.typingEffect
+      }
+
+      span {
+        @include m.typingEffect
+      }
     }
+
 
     @media screen and (max-width: 425px) {
       letter-spacing: 0;
