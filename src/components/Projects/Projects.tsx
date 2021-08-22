@@ -11,7 +11,7 @@ type PropsType = {
 export const Projects: React.FC<PropsType> = ({projects}) => {
 
     return (
-        <div className={s.projectsBlock}>
+        <div id='projects' className={s.projectsBlock}>
             <div className={`${sContainer.container} ${s.projectsContainer}`}>
                 <Title text={'Projects'}/>
                 <div className={s.projects}>
@@ -20,7 +20,7 @@ export const Projects: React.FC<PropsType> = ({projects}) => {
                                         style={project.style}
                                         title={project.title}
                                         description={project.description}
-                                        href={project.url}
+                                        href={project.link}
                         />
                     })}
                 </div>

@@ -22,7 +22,7 @@ export type ProjectType = {
     title: string
     description: string
     style: any
-    url: string
+    link: string
 }
 export type ContactType = {
     image: string
@@ -69,14 +69,14 @@ export const state = {
             description: 'React, Redux, Redux-Form, REST API, Typescript, CSS-Modules. A social networking service. ' +
                 'An online platform for people to build social networks or social relationships with other people.',
             style: socialNetwork,
-            url: 'https://github.com/Inna3112/social-network-new',
+            link: 'https://github.com/Inna3112/social-network-new',
         },
         {
             title: 'Todolist',
             description: 'React, Redux, REST API, Typescript, Formik, Material-UI, Storybook, Unit-tests. ' +
                 'An app for Task Management, Project Management, Productivity.',
             style: todoList,
-            url: 'https://github.com/Inna3112/TodoList',
+            link: 'https://github.com/Inna3112/TodoList',
         }
     ],
     contacts:  [

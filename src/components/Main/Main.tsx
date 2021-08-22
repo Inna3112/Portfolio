@@ -5,7 +5,7 @@ import sContainer from '../../common/stiles/Container.module.scss'
 
 export const Main = () => {
     return (
-        <div className={s.mainBlock}>
+        <div id='main' className={s.mainBlock}>
             <div className={sContainer.container}>
                 <div className={s.greeting}>
                     <h6>Hi there, I'm</h6>

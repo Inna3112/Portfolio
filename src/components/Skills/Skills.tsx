@@ -12,7 +12,7 @@ type PropsType = {
 
 export const Skills: React.FC<PropsType> = ({skills}) => {
     return (
-        <div className={s.skillsBlock}>
+        <div id='skills' className={s.skillsBlock}>
             <div className={`${sContainer.container} ${s.skillsContainer}`}>
                 <Title text={'Skills'}/>
                 <div className={s.skills}>
