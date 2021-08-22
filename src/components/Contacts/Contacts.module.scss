@@ -1,6 +1,7 @@
 @use "src/common/stiles/sass/variables" as v;
 @use "src/common/stiles/sass/mixins" as m;
 @use "src/common/components/Button/Button.module";
+@use "src/components/Footer/Footer.module";
 
 * {
   outline: none !important;
@@ -12,37 +13,74 @@
 
   .contactsContainer {
     @include m.flexContainer();
+    position: relative;
 
-    .contactForm {
-      background: #fff;
-      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
-      position: relative;
-      overflow: hidden;
-      padding: 35px;
-      margin-top: 30px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      top: 90px;
+      left: -90px;
+      width: 30%;
+      background: v.$bgColor;
 
-      .formControl:focus {
-        border-color: v.$bgColor;
+    }
+
+    .contacts {
+      @include m.flex(space-between, center);
+
+      .contactsFormContainer {
+        margin-top: 30px;
+        background: #fff;
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+        position: relative;
+        overflow: hidden;
+        padding: 35px;
+        width: 50%;
+        z-index: 1;
+
+        .contactForm {
+          width: 100%;
+          background: #fff;
+          box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+          position: relative;
+          overflow: hidden;
+          padding: 35px;
+          z-index: 1;
+          left: 0;
+
+          .formControl:focus {
+            border-color: v.$bgColor;
+          }
+
+          & input, & textarea {
+            width: 100%;
+            margin: 5px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 0;
+            border: 1px solid rgba(28, 29, 36, .5);
+            height: 40px;
+            box-shadow: none !important;
+            font-size: 15px;
+            color: v.$textColor;
+          }
+
+          & textarea {
+            height: inherit;
+          }
+
+          & button[type='submit'] {
+            @extend .button;
+          }
+        }
       }
 
-      & input, & textarea {
-        width: 100%;
-        margin: 5px;
-        padding: 10px;
-        background-color: #fff;
-        border-radius: 0;
-        border: 1px solid rgba(28, 29, 36, .5);
-        height: 40px;
-        box-shadow: none !important;
-        font-size: 15px;
-        color: v.$textColor;
-      }
-
-      & textarea {
-        height: inherit;
-      }
-      & button[type='submit'] {
-        @extend .button;
+      .contactsInfo {
+        .contactsTitle {
+          @extend .title;
+          color: v.$textColor;
+        }
       }
     }
   }

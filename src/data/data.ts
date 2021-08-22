@@ -9,6 +9,9 @@ import browser from './../assets/images/053-web browser.svg'
 import pencil from './../assets/images/038-pencil box.svg'
 import rocket from './../assets/images/039-rocket.svg'
 import checklist from './../assets/images/047-checklist.svg'
+import mail from './../assets/icons/formInfoIcons/mail.svg'
+import location from './../assets/icons/formInfoIcons/location.svg'
+import phone from './../assets/icons/formInfoIcons/phone.svg'
 
 
 export type StateType = typeof state
@@ -28,6 +31,11 @@ export type ContactType = {
     image: string
     imgAlt: string
     link: string
+}
+export type FormInfoItem = {
+    image: string
+    imgAlt: string
+    description: string
 }
 const socialNetwork = {
     backgroundImage: `url(${socialNetworkImg})`,
@@ -86,9 +94,9 @@ export const state = {
         {image: telegaIcon, imgAlt: 'telegram',link:'https://t.me/InnaFSS'},
         {image: codeIcon, imgAlt: 'codewars',link:'https://www.codewars.com/users/Inna3112'},
     ],
-    // formInfoItems : [
-    //     {image: mail, imgAlt: 'mail',description:'innula3113@gmail.com'},
-    //     {image: location, imgAlt: 'location',description:'Krywyi Rih, Ukraine'},
-    //     {image: phone, imgAlt: 'phone',description:'+380967708048'},
-    // ]
+    formInfoItems : [
+        {image: mail, imgAlt: 'mail',description:'innula3113@gmail.com'},
+        {image: location, imgAlt: 'location',description:'Krywyi Rih, Ukraine'},
+        {image: phone, imgAlt: 'phone',description:'+380967708048'},
+    ]
 }
