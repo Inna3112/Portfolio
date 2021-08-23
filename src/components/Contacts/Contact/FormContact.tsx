@@ -1,6 +1,6 @@
 import React from 'react';
-import s from './Contact.module.scss';
-import {FormInfoItem} from "../../../data/data";
+import s from './FormContact.module.scss';
+import {FormInfoItem} from '../../../data/data';
 
 
 type PropsType = {
@@ -10,7 +10,7 @@ export const FormContact: React.FC<PropsType> = ({formInfoItems}) => {
 
     const contactItem = formInfoItems.map((el, index) => {
         return (
-            <div key={index}>
+            <div  key={index}>
                 <img src={el.image} alt={el.imgAlt}/>
                 <div>{el.description}</div>
             </div>)

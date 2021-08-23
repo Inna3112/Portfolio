@@ -3,6 +3,8 @@ import s from './Contacts.module.scss';
 import sContainer from '../../common/stiles/Container.module.scss'
 import {Title} from '../../common/components/title/Title';
 import {FormInfoItem} from '../../data/data';
+import {FormContact} from './Contact/FormContact';
+
 
 type PropsType = {
     formInfoItems: Array<FormInfoItem>
@@ -28,24 +30,6 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
                     </div>
                 </div>
             </div>
-        </div>
-    );
-}
-
-type CPropsType = {
-    formInfoItems: Array<FormInfoItem>
-}
-export const FormContact: React.FC<CPropsType> = ({formInfoItems}) => {
-
-    return (
-        <div className={s.contact}>
-            {formInfoItems.map((el, index) => {
-                return (
-                    <div key={index}>
-                        <img src={el.image} alt={el.imgAlt}/>
-                        <div>{el.description}</div>
-                    </div>)
-            })}
         </div>
     );
 }

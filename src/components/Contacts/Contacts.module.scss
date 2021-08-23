@@ -29,8 +29,8 @@
     .contacts {
       @include m.flex(space-between, center);
 
-      @media screen and (max-width: 950px){
-        justify-content: center;
+      @media screen and (max-width: 980px) {
+        flex-direction: column;
       }
 
       .contactsFormContainer {
@@ -76,12 +76,18 @@
 
           & button[type='submit'] {
             @extend .button;
+            @media screen and (max-width: 650px){
+              font-size: 10px;
+              line-height: 26px;
+              padding: 0 2px;
+              letter-spacing: 0;
+            }
           }
         }
       }
 
       .contactsInfo {
-
+        padding: 20px;
         .contactsTitle {
           @extend .title;
           color: v.$textColor;
