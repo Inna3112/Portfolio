@@ -23,7 +23,7 @@ const App: React.FC<PropsType> = ({skills, projects, contacts, formInfoItems}) =
             <Projects projects={projects}/>
             <Contacts formInfoItems={formInfoItems}/>
             <Footer contacts={contacts}/>
-            <CustomCursor />
+            <CustomCursor/>
         </div>
     );
 }

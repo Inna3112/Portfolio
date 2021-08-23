@@ -13,21 +13,25 @@
 
   .contactsContainer {
     @include m.flexContainer();
-    position: relative;
+    //position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -50px;
-      top: 90px;
-      left: -90px;
-      width: 30%;
-      background: v.$bgColor;
-
-    }
+    //&::after {
+    //  content: "";
+    //  position: absolute;
+    //  bottom: -50px;
+    //  top: 90px;
+    //  left: -90px;
+    //  width: 30%;
+    //  background: v.$bgColor;
+    //
+    //}
 
     .contacts {
       @include m.flex(space-between, center);
+
+      @media screen and (max-width: 950px){
+        justify-content: center;
+      }
 
       .contactsFormContainer {
         margin-top: 30px;
@@ -36,7 +40,7 @@
         position: relative;
         overflow: hidden;
         padding: 35px;
-        width: 50%;
+        width: 70%;
         z-index: 1;
 
         .contactForm {
@@ -77,6 +81,7 @@
       }
 
       .contactsInfo {
+
         .contactsTitle {
           @extend .title;
           color: v.$textColor;

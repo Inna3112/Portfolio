@@ -1,4 +1,4 @@
-import s from '../../App.module.scss';
+import s from './CustomCursor.module.scss';
 import React, {useEffect, useRef} from 'react';
 
 export const CustomCursor = () => {
@@ -18,9 +18,6 @@ export const CustomCursor = () => {
 
     useEffect(() => {
         document.addEventListener('mousemove', (event) => {
-            console.log(mainCursor)
-            console.log(secondaryCursor)
-            console.log(positionRef)
 
             const {clientX, clientY} = event
 
@@ -37,27 +34,8 @@ export const CustomCursor = () => {
                 // mainCursor.current.clientWidth / 2}px, ${mouseY -
                 // mainCursor.current.clientHeight / 2}px, 0`
 
-                mainCursor.current.style.width = '12px'
-                mainCursor.current.style.height = '12px'
-                mainCursor.current.style.backgroundColor = 'rgb(255, 147, 1)'
-                mainCursor.current.style.zIndex = '999'
-                mainCursor.current.style.display = 'block'
-                mainCursor.current.style.position = 'fixed'
-                mainCursor.current.style.borderRadius = '50%'
-                // mainCursor.current.style.pointerEvents = 'none'
-                mainCursor.current.style.transition = `opacity 0.15s ease-in-out 0s, transform 0.25s ease-in-out 0s`
-
-                mainCursor.current.style.top = `${mouseY -
-                mainCursor.current.clientHeight / 2}px`
-
-                mainCursor.current.style.left = `${mouseX -
-                mainCursor.current.clientWidth / 2}px`
-
-                mainCursor.current.className = 'mainCursor'
-
-                mainCursor.current.style.opacity = '0'
-                mainCursor.current.style.transform = `translate(-50%, -50%) scale(1)`
-
+                mainCursor.current.style.top = `${mouseY - mainCursor.current.clientHeight / 2}px`
+                mainCursor.current.style.left = `${mouseX - mainCursor.current.clientWidth / 2}px`
             }
         })
     }, [])
@@ -71,16 +49,14 @@ export const CustomCursor = () => {
                 mouseY,
                 destinationX,
                 destinationY,
-                distanceX,
-                distanceY
             } = positionRef.current
 
             if (!destinationX || !destinationY) {
                 positionRef.current.destinationX = mouseX
                 positionRef.current.destinationY = mouseY
             } else {
-                positionRef.current.destinationX = mouseX
-                positionRef.current.destinationY = mouseY
+                positionRef.current.destinationX = (mouseX - destinationX) * 0.1
+                positionRef.current.destinationY = (mouseY - destinationY) * 0.1
 
                 if (Math.abs(positionRef.current.destinationX) +
                     Math.abs(positionRef.current.destinationY) < 0.1) {
@@ -92,9 +68,9 @@ export const CustomCursor = () => {
                 }
             }
             if (secondaryCursor.current) {
-                secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`
-
-                secondaryCursor.current.className = 'secondaryCursor'
+                // secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`
+                secondaryCursor.current.style.top = `${destinationY}px`
+                secondaryCursor.current.style.left =  `${destinationX}px`
             }
         }
         followMouse()
@@ -102,9 +78,11 @@ export const CustomCursor = () => {
 
 
     return (
-        <div className={s.cursor}>
-            <div className={s.mainCursor} ref={mainCursor}></div>
-            <div className={s.secondaryCursor} ref={secondaryCursor}></div>
-        </div>
+        <>
+            <div className={s.mainCursor} ref={mainCursor} > </div>
+            <div className={s.secondaryCursor}  ref={secondaryCursor}> </div>
+        </>
+
+
     )
 }
