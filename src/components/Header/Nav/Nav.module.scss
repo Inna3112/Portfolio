@@ -4,8 +4,11 @@
 .nav {
   @include m.flex(space-between, flex-end);
   //border: 1px solid;
-  width: 400px;
+  width: 500px;
 
+  & span{
+    padding: 20px;
+  }
   & a {
     text-decoration: none;
     font-size: 20px;
@@ -21,7 +24,7 @@
       color: v.$bgColor;
     }
   }
-  @media screen and (max-width: 400px){
+  @media screen and (max-width: 850px){
     display: none;
   }
 }

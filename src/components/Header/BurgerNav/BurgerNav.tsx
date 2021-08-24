@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from './BurgerNav.module.scss';
-import { Link } from 'react-scroll';
+import {Link} from 'react-scroll';
+
 
 export const BurgerNav = () => {
-    let arr =[
+    const [isOpen, setIsOpen] = useState(false)
+    console.log(isOpen)
+
+    let arr = [
         {name: 'main', id: 'main'},
         {name: 'skills', id: 'skills'},
         {name: 'projects', id: 'projects'},
@@ -24,9 +28,18 @@ export const BurgerNav = () => {
             </span>
         )
     })
+
+    const handlerIsOpen = () => {
+        console.log(isOpen)
+        setIsOpen(!isOpen)
+    }
     return (
         <div className={s.burgerNav}>
-            {navLinks}
+            <div className={!isOpen ? s.hide : `${s.burgerNavItems}` }>
+                {navLinks}
+            </div>
+            <button onClick={handlerIsOpen} className={s.burgerBtn}></button>
         </div>
+
     );
 }

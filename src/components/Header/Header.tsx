@@ -7,12 +7,12 @@ import {BurgerNav} from './BurgerNav/BurgerNav';
 export const Header = () => {
 
     return (
-        <header className={s.header}>
-            <div className={s.fixed}>
+        // <header className={s.header}>
+            <div className={s.header}>
                 <Nav />
                 <BurgerNav />
             </div>
-        </header>
+        // </header>
 
     );
 }

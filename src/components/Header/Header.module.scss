@@ -1,17 +1,16 @@
 @use "src/common/stiles/sass/variables" as v;
 @use "src/common/stiles/sass/mixins" as m;
 
-.header {
-  @include m.flex(flex-end, center);
-  min-height: 80px;
-  background-color: v.$bgSecondColor;
+//.header {
+//  min-height: 80px;
+//  background-color: v.$bgSecondColor;
+//  position: relative;
 
-  .fixed {
-    @include m.flex(flex-end, center);
+  .header {
     position: fixed;
     width: 100%;
-    min-height: 80px;
+    height: 80px;
     background-color: v.$bgSecondColor;
     z-index: 10;
   }
-}
+//}
