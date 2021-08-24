@@ -35,14 +35,14 @@ export const BurgerNav = () => {
     }
     return (
         <div className={s.burgerNav}>
-            <div className={!isOpen ? s.hide : `${s.burgerNavItems}` }>
+            <div className={!isOpen ? s.hide : s.burgerNavItems }>
                 {navLinks}
             </div>
             <button onClick={handlerIsOpen} className={s.burgerBtn}>
                 <div className={s.burgerDiv}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span className={isOpen ? s.active : ''}></span>
+                    <span className={isOpen ? s.active : ''}></span>
+                    <span className={isOpen ? s.active : ''}></span>
                 </div>
             </button>
         </div>
