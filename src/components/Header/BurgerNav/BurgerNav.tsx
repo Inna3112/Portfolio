@@ -38,7 +38,13 @@ export const BurgerNav = () => {
             <div className={!isOpen ? s.hide : `${s.burgerNavItems}` }>
                 {navLinks}
             </div>
-            <button onClick={handlerIsOpen} className={s.burgerBtn}></button>
+            <button onClick={handlerIsOpen} className={s.burgerBtn}>
+                <div className={s.burgerDiv}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
         </div>
 
     );

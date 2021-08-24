@@ -1,16 +1,16 @@
 @use "src/common/stiles/sass/variables" as v;
 @use "src/common/stiles/sass/mixins" as m;
 
-//.header {
-//  min-height: 80px;
-//  background-color: v.$bgSecondColor;
-//  position: relative;
+.header {
+  min-height: 80px;
+  background-color: v.$bgSecondColor;
+  position: relative;
 
-  .header {
+  .fixed {
     position: fixed;
     width: 100%;
     height: 80px;
     background-color: v.$bgSecondColor;
     z-index: 10;
   }
-//}
+}
