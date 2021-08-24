@@ -11,6 +11,8 @@ export const ScrollUp = () => {
     return (
         <div onClick={scrollToTop} className={s.scrollUp}>
             <span className={s.tiAngleDoubleUp}>
+                <span className={s.arrow}></span>
+                <span className={s.arrow}></span>
             </span>
         </div>
 
