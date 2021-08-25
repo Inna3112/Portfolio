@@ -1,7 +1,21 @@
 @use "src/common/stiles/sass/variables" as v;
+@use "src/common/stiles/sass/mixins" as m;
 
 .contact {
+  .contactItem {
+    @include m.flex(right, center);
+    margin: 10px 0;
 
+    & img {
+      width: 20px;
+      height: 20px;
+      margin: 0;
+    }
+
+    .description {
+      margin: 0 0 0 5px;
+    }
+  }
 }
 
 
