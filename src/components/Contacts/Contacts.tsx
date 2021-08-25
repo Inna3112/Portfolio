@@ -16,14 +16,12 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
             <div className={`${sContainer.container} ${s.contactsContainer}`}>
                 <Title text={'Contacts'}/>
                 <div className={s.contacts}>
-                    <div className={s.contactsFormContainer}>
-                        <form className={s.contactForm}>
-                            <input className={s.formControl} type='text' placeholder={'Name'}/>
-                            <input className={s.formControl} type='text' placeholder={'Email'}/>
-                            <textarea className={s.formControl} placeholder={'Comment'}/>
-                            <button type='submit'>Send your message</button>
-                        </form>
-                    </div>
+                    <form className={s.contactForm}>
+                        <input className={s.formControl} type='text' placeholder={'Name'}/>
+                        <input className={s.formControl} type='text' placeholder={'Email'}/>
+                        <textarea className={s.formControl} placeholder={'Comment'}/>
+                        <button type='submit'>Send your message</button>
+                    </form>
                     <div className={s.contactsInfo}>
                         <h2 className={s.contactsTitle}>Get in touch</h2>
                         <FormContact formInfoItems={formInfoItems}/>

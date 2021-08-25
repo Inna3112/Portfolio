@@ -28,66 +28,62 @@
 
     .contacts {
       @include m.flex(space-between, center);
+      margin-top: 30px;
+      padding: 35px;
 
       @media screen and (max-width: 980px) {
         flex-direction: column;
       }
 
-      .contactsFormContainer {
-        margin-top: 30px;
+      .contactForm {
+        width: 100%;
         background: #fff;
         box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
         position: relative;
         overflow: hidden;
         padding: 35px;
-        width: 70%;
         z-index: 1;
+        left: 0;
 
-        .contactForm {
+        .formControl:focus {
+          border-color: v.$bgColor;
+        }
+
+        & input, & textarea {
           width: 100%;
-          background: #fff;
-          box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
-          position: relative;
-          overflow: hidden;
-          padding: 35px;
-          z-index: 1;
-          left: 0;
+          margin: 5px;
+          padding: 10px;
+          background-color: #fff;
+          border-radius: 0;
+          border: 1px solid rgba(28, 29, 36, .5);
+          height: 40px;
+          box-shadow: none !important;
+          font-size: 15px;
+          color: v.$textColor;
+        }
 
-          .formControl:focus {
-            border-color: v.$bgColor;
-          }
+        & textarea {
+          height: inherit;
+        }
 
-          & input, & textarea {
-            width: 100%;
-            margin: 5px;
-            padding: 10px;
-            background-color: #fff;
-            border-radius: 0;
-            border: 1px solid rgba(28, 29, 36, .5);
-            height: 40px;
-            box-shadow: none !important;
-            font-size: 15px;
-            color: v.$textColor;
+        & button[type='submit'] {
+          @extend .button;
+          @media screen and (max-width: 650px) {
+            font-size: 10px;
+            line-height: 26px;
+            padding: 0 2px;
+            letter-spacing: 0;
           }
+        }
 
-          & textarea {
-            height: inherit;
-          }
-
-          & button[type='submit'] {
-            @extend .button;
-            @media screen and (max-width: 650px){
-              font-size: 10px;
-              line-height: 26px;
-              padding: 0 2px;
-              letter-spacing: 0;
-            }
-          }
+        @media screen and (max-width: 980px) {
+          width: 100%;
         }
       }
 
       .contactsInfo {
         padding: 20px;
+
         .contactsTitle {
           @extend .title;
           color: v.$textColor;
