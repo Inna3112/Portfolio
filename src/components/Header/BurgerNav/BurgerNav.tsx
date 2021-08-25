@@ -5,7 +5,6 @@ import {Link} from 'react-scroll';
 
 export const BurgerNav = () => {
     const [isOpen, setIsOpen] = useState(false)
-    console.log(isOpen)
 
     let arr = [
         {name: 'main', id: 'main'},
@@ -30,7 +29,6 @@ export const BurgerNav = () => {
     })
 
     const handlerIsOpen = () => {
-        console.log(isOpen)
         setIsOpen(!isOpen)
     }
     return (
