@@ -2,6 +2,9 @@
 @use "src/common/stiles/sass/mixins" as m;
 
 .contact {
+  flex-direction: column;
+  @include m.flex(right, start);
+
   .contactItem {
     @include m.flex(right, center);
     margin: 10px 0;
@@ -15,6 +18,11 @@
     .description {
       margin: 0 0 0 5px;
     }
+  }
+
+  @media screen and (max-width: 980px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
