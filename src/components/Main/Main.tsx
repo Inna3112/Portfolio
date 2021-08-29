@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Main.module.scss';
 import sContainer from '../../common/stiles/Container.module.scss'
 import ReactTypingEffect from 'react-typing-effect';
-import MainPhoto from './../../assets/images/MainPhoto.jpeg'
+import MainPhoto from './../../assets/images/photo.jpeg'
 
 
 export const Main = () => {
