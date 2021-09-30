@@ -4,6 +4,9 @@
 .mainBlock {
   min-height: 100vh;
   background-color: v.$bgColor;
+  //background-size: cover;
+  //background-position: center;
+  //background-repeat: no-repeat;
   @include m.flex(center, center);
 
   .greeting {

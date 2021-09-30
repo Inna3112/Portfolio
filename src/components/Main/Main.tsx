@@ -4,6 +4,9 @@ import sContainer from '../../common/stiles/Container.module.scss'
 import ReactTypingEffect from 'react-typing-effect';
 import MainPhoto from './../../assets/images/photo.jpeg'
 
+// const mainBackground = {
+//     backgroundImage: `url(${wallImg})`,
+// }
 
 export const Main = () => {
     return (

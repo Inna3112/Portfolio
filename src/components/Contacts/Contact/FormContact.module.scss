@@ -4,7 +4,7 @@
 .contact {
 
   .contactItem {
-    @include m.flex(right, center);
+    @include m.flex('', center);
     margin: 10px 0;
 
     & img {
