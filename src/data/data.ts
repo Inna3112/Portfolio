@@ -96,7 +96,7 @@ export const state = {
     ],
     formInfoItems : [
         {image: mail, imgAlt: 'mail',description:'innula3113@gmail.com'},
-        {image: location, imgAlt: 'location',description:'Krywyi Rih, Ukraine'},
+        {image: location, imgAlt: 'location',description:'Kryvyi Rih, Ukraine'},
         {image: phone, imgAlt: 'phone',description:'+380967708048'},
     ]
 }
