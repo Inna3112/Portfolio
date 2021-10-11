@@ -12,15 +12,17 @@ type PropsType = {
 }
 
 export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
-    const [nameValue, setNameValue] = useState('')
-    const [emailValue, setEmailValue] = useState('')
-    const [commentValue, setCommentValue] = useState('')
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
 
     const onSubmitHandler = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        axios.post('http://localhost:3010/sendMessage', {nameValue, emailValue, commentValue})
+        axios.post('http://localhost:3010/sendMessage', {name, email, message})
             .then(()=> {
-                alert('Message has been sent')
+                setName('')
+                setEmail('')
+                setMessage('')
             })
     }
 
@@ -31,14 +33,14 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
                 <div className={s.contacts}>
                     <form className={s.contactForm} onSubmit={onSubmitHandler}>
                         <input className={s.formControl} type='text' placeholder={'Name'}
-                               value={nameValue}
-                               onChange={(e) => setNameValue(e.currentTarget.value)}/>
+                               value={name}
+                               onChange={(e) => setName(e.currentTarget.value)}/>
                         <input className={s.formControl} type='text' placeholder={'Email'}
-                               value={emailValue}
-                               onChange={(e) => setEmailValue(e.currentTarget.value)}/>
+                               value={email}
+                               onChange={(e) => setEmail(e.currentTarget.value)}/>
                         <textarea className={s.formControl} placeholder={'Comment'}
-                                  value={commentValue}
-                                  onChange={(e) => setCommentValue(e.currentTarget.value)}/>
+                                  value={message}
+                                  onChange={(e) => setMessage(e.currentTarget.value)}/>
                         <button type='submit'>Send your message</button>
                     </form>
                     <div className={s.contactsInfo}>
