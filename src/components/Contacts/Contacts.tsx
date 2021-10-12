@@ -15,7 +15,8 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-    const [isSend, setIsSend] = useState(false)
+    const [isSent, setIsSent] = useState(false)
+    const [error, setError] = useState('')
 
     const onSubmitHandler = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -25,12 +26,18 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
         setName('')
         setEmail('')
         setMessage('')
-        setIsSend(true)
             result.then(()=> {
-                setIsSend(false)
+                setIsSent(true)
             })
-                .catch((e) => {
-                    console.log(e)
+                .catch(() => {
+                    setError('An error occurred')
+                })
+                .finally(() => {
+                    setTimeout(() => {
+                        setIsSent(false)
+                        setError('')
+                    }, 5000)
+
                 })
     }
 
@@ -52,7 +59,7 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
                         <button type='submit'>Send your message</button>
                     </form>
                     <div className={s.infoMessage}>
-                        {isSend && 'Your message send'}
+                        {isSent ? 'Your message has been sent' : error}
                     </div>
                     <div className={s.contactsInfo}>
                         <h2 className={s.contactsTitle}>Get in touch</h2>
