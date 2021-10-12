@@ -15,14 +15,17 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    const [isSend, setIsSend] = useState(false)
 
     const onSubmitHandler = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        axios.post('http://localhost:3010/sendMessage', {name, email, message})
-            .then(()=> {
-                setName('')
-                setEmail('')
-                setMessage('')
+        const result = axios.post('http://localhost:3010/sendMessage', {name, email, message})
+        setName('')
+        setEmail('')
+        setMessage('')
+        setIsSend(true)
+            result.then(()=> {
+                setIsSend(false)
             })
     }
 
@@ -43,6 +46,9 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
                                   onChange={(e) => setMessage(e.currentTarget.value)}/>
                         <button type='submit'>Send your message</button>
                     </form>
+                    <div className={s.infoMessage}>
+                        {isSend && 'Your message send'}
+                    </div>
                     <div className={s.contactsInfo}>
                         <h2 className={s.contactsTitle}>Get in touch</h2>
                         <FormContact formInfoItems={formInfoItems}/>
