@@ -19,7 +19,8 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
 
     const onSubmitHandler = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const result = axios.post('http://localhost:3010/sendMessage', {name, email, message})
+        const result = axios.post('https://smtp-nodejs-server-for-mail.herokuapp.com/sendMessage',
+            {name, email, message})
         setName('')
         setEmail('')
         setMessage('')
