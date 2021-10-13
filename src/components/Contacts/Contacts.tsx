@@ -4,7 +4,7 @@ import sContainer from '../../common/stiles/Container.module.scss'
 import {Title} from '../../common/components/title/Title';
 import {FormInfoItem} from '../../data/data';
 import {FormContact} from './Contact/FormContact';
-import axios from 'axios';
+import {api} from '../../dal/api';
 
 
 type PropsType = {
@@ -18,27 +18,25 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
     const [isSent, setIsSent] = useState(false)
     const [error, setError] = useState('')
 
-    const onSubmitHandler = (e:FormEvent<HTMLFormElement>) => {
+    const onSubmitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const result = axios.post('https://smtp-nodejs-server-for-mail.herokuapp.com/sendMessage',
-        // const result = axios.post('http://localhost:3010/sendMessage',
-            {name, email, message})
-        setName('')
-        setEmail('')
-        setMessage('')
-            result.then(()=> {
+        api.createMessage(name, email, message)
+            .then(() => {
                 setIsSent(true)
             })
-                .catch(() => {
-                    setError('An error occurred')
-                })
-                .finally(() => {
-                    setTimeout(() => {
-                        setIsSent(false)
-                        setError('')
-                    }, 5000)
+            .catch(() => {
+                setError('An error occurred')
+            })
+            .finally(() => {
+                setName('')
+                setEmail('')
+                setMessage('')
+                setTimeout(() => {
+                    setIsSent(false)
+                    setError('')
+                }, 5000)
 
-                })
+            })
     }
 
     return (
