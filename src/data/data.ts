@@ -55,7 +55,7 @@ export const state = {
         {
             icon: rocket,
             title: 'Development',
-            description: 'React, Redux, Axios, Redux-toolkit',
+            description: 'React, Redux, Redux-Thunk, Axios, Redux-toolkit',
             imgAlt: '',
         },
         {
@@ -74,7 +74,7 @@ export const state = {
     projects: [
         {
             title: 'Social network',
-            description: 'React, Redux, Redux-Form, REST API, Typescript, CSS-Modules. A social networking service. ' +
+            description: 'React, Redux, Formik, REST API, Typescript, CSS-Modules. A social networking service. ' +
                 'An online platform for people to build social networks or social relationships with other people.',
             style: socialNetwork,
             link: 'https://github.com/Inna3112/social-network-new',
