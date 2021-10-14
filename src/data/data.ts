@@ -43,6 +43,9 @@ const socialNetwork = {
 const todoList = {
     backgroundImage: `url(${todo})`,
 }
+const cards = {
+    backgroundImage: `url(${socialNetworkImg})`,
+}
 
 export const state = {
     skills: [
@@ -74,17 +77,24 @@ export const state = {
     projects: [
         {
             title: 'Social network',
-            description: 'React, Redux, Formik, REST API, Typescript, CSS-Modules. A social networking service. ' +
+            description: 'React, Redux, Redux-Thunk, Formik, REST API, Typescript, CSS-Modules. A social networking service. ' +
                 'An online platform for people to build social networks or social relationships with other people.',
             style: socialNetwork,
             link: 'https://github.com/Inna3112/social-network-new',
         },
         {
             title: 'Todolist',
-            description: 'React, Redux, REST API, Typescript, Formik, Material-UI, Storybook, Unit-tests. ' +
+            description: 'React, Redux, Redux-Thunk, REST API, Typescript, Formik, Material-UI, Storybook, Unit-tests. ' +
                 'An app for Task Management, Project Management, Productivity.',
             style: todoList,
             link: 'https://github.com/Inna3112/TodoList',
+        },
+        {
+            title: 'Knowledge cards',
+            description: 'React, Redux, Redux-Thunk, REST API, Typescript' +
+                'An app was created for learning. The user can enter a list of questions and answers for further study.',
+            style: cards,
+            link: 'https://github.com/Inna3112/Cards',
         }
     ],
     contacts:  [

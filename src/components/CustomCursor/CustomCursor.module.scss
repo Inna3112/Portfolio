@@ -10,8 +10,8 @@
   background-color: rgb(255, 147, 1);
   transition: opacity 0.15s ease-in-out 0s, transform 0.25s ease-in-out 0s;
   transform: translate(-50%, -50%) scale(1);
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 
 .secondaryCursor {
@@ -26,8 +26,8 @@
   transition: opacity 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
   will-change: transform;
   transform: translate(-50%, -50%) scale(1);
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 
 
