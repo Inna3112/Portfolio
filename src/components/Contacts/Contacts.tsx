@@ -7,6 +7,7 @@ import {FormContact} from './Contact/FormContact';
 import {api} from '../../dal/api';
 
 
+
 type PropsType = {
     formInfoItems: Array<FormInfoItem>
 }
@@ -17,9 +18,11 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
     const [message, setMessage] = useState('')
     const [isSent, setIsSent] = useState(false)
     const [error, setError] = useState('')
+    const [isDisable, setIsDisable] = useState(false)
 
     const onSubmitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        setIsDisable(true)
         api.createMessage(name, email, message)
             .then(() => {
                 setIsSent(true)
@@ -31,6 +34,7 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
                 setName('')
                 setEmail('')
                 setMessage('')
+                setIsDisable(false)
                 setTimeout(() => {
                     setIsSent(false)
                     setError('')
@@ -54,11 +58,11 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
                         <textarea className={s.formControl} placeholder={'Comment'}
                                   value={message}
                                   onChange={(e) => setMessage(e.currentTarget.value)}/>
-                        <button type='submit'>Send your message</button>
+                        <button type='submit' disabled={isDisable} >Send your message</button>
+                        <div className={s.infoMessage}>
+                            {isSent ? 'Your message has been sent' : error}
+                        </div>
                     </form>
-                    <div className={s.infoMessage}>
-                        {isSent ? 'Your message has been sent' : error}
-                    </div>
                     <div className={s.contactsInfo}>
                         <h2 className={s.contactsTitle}>Get in touch</h2>
                         <FormContact formInfoItems={formInfoItems}/>

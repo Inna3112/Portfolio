@@ -20,5 +20,8 @@
   &:hover {
     background-color: v.$textColor;
   }
+  &:disabled {
+    background-color: #e3dcdc;
+  }
 }
 

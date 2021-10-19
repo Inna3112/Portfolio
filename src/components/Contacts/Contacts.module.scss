@@ -72,14 +72,14 @@
             width: 100%;
           }
         }
-
         @media screen and (max-width: 980px) {
           width: 100%;
         }
-      }
-      .infoMessage{
-        height: 20px;
-        color: red;
+        .infoMessage{
+          height: 20px;
+          color: red;
+          @include m.flex(center, center);
+        }
       }
       .contactsInfo {
         padding: 20px;
