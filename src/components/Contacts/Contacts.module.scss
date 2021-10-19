@@ -76,9 +76,12 @@
           width: 100%;
         }
         .infoMessage{
-          height: 20px;
-          color: red;
           @include m.flex(center, center);
+          height: 20px;
+          color: green;
+        }
+        .error{
+          color: red;
         }
       }
       .contactsInfo {

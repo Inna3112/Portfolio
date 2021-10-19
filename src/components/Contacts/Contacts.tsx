@@ -59,7 +59,7 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
                                   value={message}
                                   onChange={(e) => setMessage(e.currentTarget.value)}/>
                         <button type='submit' disabled={isDisable} >Send your message</button>
-                        <div className={s.infoMessage}>
+                        <div className={!error ? s.infoMessage : `${s.infoMessage} ${s.error}`}>
                             {isSent ? 'Your message has been sent' : error}
                         </div>
                     </form>
