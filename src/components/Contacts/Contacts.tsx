@@ -5,6 +5,7 @@ import {Title} from '../../common/components/title/Title';
 import {FormInfoItem} from '../../data/data';
 import {FormContact} from './Contact/FormContact';
 import {api} from '../../dal/api';
+import {Loader} from '../../common/Loader/Loader';
 
 
 
@@ -19,9 +20,11 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
     const [isSent, setIsSent] = useState(false)
     const [error, setError] = useState('')
     const [isDisable, setIsDisable] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
 
     const onSubmitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        setIsLoading(true)
         setIsDisable(true)
         api.createMessage(name, email, message)
             .then(() => {
@@ -35,6 +38,7 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
                 setEmail('')
                 setMessage('')
                 setIsDisable(false)
+                setIsLoading(false)
                 setTimeout(() => {
                     setIsSent(false)
                     setError('')
@@ -45,6 +49,7 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
 
     return (
         <div id='contacts' className={s.contactsBlock}>
+            {isLoading && <Loader />}
             <div className={`${sContainer.container} ${s.contactsContainer}`}>
                 <Title text={'Contacts'}/>
                 <div className={s.contacts}>
