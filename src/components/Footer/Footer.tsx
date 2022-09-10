@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterPropsType> = ({contacts}) => {
                 <div className={s.socialIcons}>
                     <Links contacts={contacts}/>
                 </div>
-                <p className={s.footerRight}>2021 All rights reserved</p>
+                <p className={s.footerRight}>2022 All rights reserved</p>
             </div>
         </div>
     );
