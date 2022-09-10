@@ -4,6 +4,7 @@
 .skill {
   @include m.flex(space-between, center);
   width: 250px;
+  min-height: 180px;
   position: relative;
   flex-direction: column;
   text-align: center;
