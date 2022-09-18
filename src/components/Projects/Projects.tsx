@@ -17,6 +17,7 @@ export const Projects: React.FC<PropsType> = ({projects}) => {
                 <div className={s.projects}>
                     {projects.map((project, index) => {
                         return <Project key={index}
+                                        id={index.toString()}
                                         style={project.style}
                                         title={project.title}
                                         description={project.description}
