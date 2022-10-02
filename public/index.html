@@ -77,6 +77,7 @@
     -->
     <script>
       window.onload = () => {
+        gtag('event', 'some_event');
         const messageEl = document.querySelector('#contactsMessage');
         if (messageEl.innerHTML === 'Your message has been sent') {
           gtag('event', 'form_success_message');
