@@ -81,17 +81,19 @@
         if (messageEl.innerHTML === 'Your message has been sent') {
           gtag('event', 'form_success_message');
         }
-        document.addEventListener('click', (event) => {
-          if (event.target.tagName === 'A') {
-            gtag('event', 'link_click', {
-              'link_text': event.target.innerText,
-              'link_url': event.target.href,
-              'link_id': event.target.id,
-              'link_classes': event.target.className,
-            })
-          }
-        })
       }
+    </script>
+    <script>
+      document.addEventListener('click', (event) => {
+        if (event.target.tagName === 'A') {
+          gtag('event', 'link_click', {
+            'link_text': event.target.innerText,
+            'link_url': event.target.href,
+            'link_id': event.target.id,
+            'link_classes': event.target.className,
+          })
+        }
+      })
     </script>
   </body>
 </html>
