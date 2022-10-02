@@ -43,9 +43,8 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
                     setIsSent(false)
                     setError('')
                 }, 20000)
-
             })
-    }
+        }
 
     return (
         <div id='contacts' className={s.contactsBlock}>

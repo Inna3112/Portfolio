@@ -10,7 +10,7 @@ type ContactPropsType = {
 export const Contact: React.FC<ContactPropsType>  = ({image, imgAlt, link}) => {
     return (
         <span>
-            <a href={link}>
+            <a href={link} target="_blank" rel="noreferrer">
                 <img src={image} alt={imgAlt} className={s.socialIcon}/>
             </a>
         </span>

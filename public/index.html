@@ -76,14 +76,6 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script>
-      window.onload = () => {
-        const messageEl = document.querySelector('#contactsMessage');
-        if (messageEl.innerHTML === 'Your message has been sent') {
-          gtag('event', 'form_success_message');
-        }
-      }
-    </script>
-    <script>
       document.addEventListener('click', (event) => {
         if (event.target.tagName === 'A') {
           gtag('event', 'link_click', {
@@ -94,6 +86,9 @@
             'link_href': event.target.href,
           })
         }
+      })
+      document.addEventListener('submit', (event) => {
+        gtag('event', 'form-submitted')
       })
     </script>
   </body>
