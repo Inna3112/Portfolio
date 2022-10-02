@@ -42,7 +42,7 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
                 setTimeout(() => {
                     setIsSent(false)
                     setError('')
-                }, 5000)
+                }, 20000)
 
             })
     }
@@ -53,7 +53,7 @@ export const Contacts: React.FC<PropsType> = ({formInfoItems}) => {
             <div className={`${sContainer.container} ${s.contactsContainer}`}>
                 <Title text={'Contacts'}/>
                 <div className={s.contacts}>
-                    <form className={s.contactForm} onSubmit={onSubmitHandler}>
+                    <form id="form" className={s.contactForm} onSubmit={onSubmitHandler}>
                         <input className={s.formControl} type='text' placeholder={'Name'}
                                value={name}
                                onChange={(e) => setName(e.currentTarget.value)}/>

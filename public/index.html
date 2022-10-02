@@ -10,11 +10,11 @@
       content="Web site created using create-react-app"
     />
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MQP8Q85');</script>
+<!--    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':-->
+<!--              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],-->
+<!--            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=-->
+<!--            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);-->
+<!--    })(window,document,'script','dataLayer','GTM-MQP8Q85');</script>-->
     <!-- End Google Tag Manager -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -40,16 +40,36 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZTDF1FZ3B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CZTDF1FZ3B');
+    </script>
+    <script>
+      /**
+       * The following event is sent when the page loads. You could
+       * wrap the event in a function to call the event when certain
+       * events (e.g., a click event) happen on your site.
+       */
+      gtag('event', 'screen_view', {
+        'app_name': 'myPortfolio',
+        'screen_name': 'Home'
+      });
+    </script>
     <title>Portfolio</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQP8Q85"
-              height="0" width="0" style="display:none;visibility:hidden">
-      </iframe>
-    </noscript>
+<!--    <noscript>-->
+<!--      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQP8Q85"-->
+<!--              height="0" width="0" style="display:none;visibility:hidden">-->
+<!--      </iframe>-->
+<!--    </noscript>-->
     <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <!--

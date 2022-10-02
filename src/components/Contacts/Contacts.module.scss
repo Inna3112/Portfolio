@@ -76,9 +76,11 @@
         @media screen and (max-width: 980px) {
           width: 100%;
         }
-        .infoMessage{
+        .emptyMessage{
           @include m.flex(center, center);
           height: 50px;
+        }
+        .infoMessage{
           color: green;
         }
         .error{
