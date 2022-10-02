@@ -7,8 +7,9 @@ type PropsType = {
     projectId: string
 }
 export const Button = ({title, href, projectId}: PropsType) => {
-    return (<>
-            <a id={projectId} href={href} className={s.button}>{title}</a>
+    return (
+        <>
+            <a id={projectId} href={href} target="_blank" className={s.button}>{title}</a>
         </>
     );
 }
